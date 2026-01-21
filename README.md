@@ -1,5 +1,5 @@
-# D.U.M.D
-Modern Dungeon Crawler Game for DOS 
+# D.U.M.D ( Doomed )
+Modern Minimalist Dungeon Crawler Game for DOS 
 
 # Minimum Requeriments
 - CPU: 8088
