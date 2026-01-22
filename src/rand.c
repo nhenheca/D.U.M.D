@@ -19,3 +19,9 @@ const unsigned char rand_table[256] = {
     72, 186, 82, 174, 20, 127, 119, 193, 94, 161, 153, 239, 62, 124, 97, 138, 
     53, 45, 49, 19, 66, 22, 110, 156, 248, 16, 213, 114, 10, 162, 172, 14, 
     33, 34, 159, 59, 93, 141, 54, 198, 205, 46, 74, 150, 154, 194, 106, 60 };
+
+/* ######### FUNCTIONS ######### */
+void set_seed(){
+    rand_table_index = (unsigned char)(game_seed & 0xFF);
+    rand_table_shift = (unsigned char)((game_seed >> 8) & 0xFF);
+}
