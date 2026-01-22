@@ -1,7 +1,0 @@
-idx  = seed & 0xFF;          // start position
-step = (seed >> 8) | 1;      // must be odd
-mix  = seed ^ (seed >> 8);   // cheap diffusion
-
-unsigned char idx;    // current position
-unsigned char step;   // how far we move each time
-unsigned char mix;    // extra perturbation

@@ -1,6 +1,10 @@
-#include <rand.h>
+#include "rand.h"
 
 /* ######### INITIALIZATIONS #########*/
+unsigned int  rand_seed;
+unsigned char rand_table_index;
+unsigned char rand_table_shift;
+unsigned char rand_table_disturb;
 
 const unsigned char rand_table[256] = { 
     88, 91, 163, 173, 78, 176, 149, 155, 104, 236, 202, 169, 224, 15, 235, 222,
@@ -21,7 +25,13 @@ const unsigned char rand_table[256] = {
     33, 34, 159, 59, 93, 141, 54, 198, 205, 46, 74, 150, 154, 194, 106, 60 };
 
 /* ######### FUNCTIONS ######### */
-void set_seed(){
-    rand_table_index = (unsigned char)(game_seed & 0xFF);
-    rand_table_shift = (unsigned char)((game_seed >> 8) & 0xFF);
-}
+void set_seed(void){
+    /*union REGS r;
+    r.h.ah = 0x00;
+    int86(0x1A, &r, &r);
+    rand_seed = r.x.cx ^ r.x.dx;*/
+
+    rand_table_index  = rand_seed & 0xFF;  
+    rand_table_shift = (rand_seed >> 8) | 1;  
+    rand_table_disturb  = rand_seed ^ ( rand_seed >> 8); 
+};

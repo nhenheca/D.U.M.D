@@ -1,0 +1,32 @@
+!define BLANK ""
+C:\Users\mcpri\Desktop\DEV\D.U.M.D\build\game.obj : C:\Users\mcpri\Desktop\D&
+EV\D.U.M.D\src\game.c .AUTODEPEND
+ @C:
+ cd C:\Users\mcpri\Desktop\DEV\D.U.M.D\build
+ *wcc ..\src\game.c -fo=.obj -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -&
+ml
+
+C:\Users\mcpri\Desktop\DEV\D.U.M.D\build\map.obj : C:\Users\mcpri\Desktop\DE&
+V\D.U.M.D\src\map.c .AUTODEPEND
+ @C:
+ cd C:\Users\mcpri\Desktop\DEV\D.U.M.D\build
+ *wcc ..\src\map.c -fo=.obj -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -m&
+l
+
+C:\Users\mcpri\Desktop\DEV\D.U.M.D\build\rand.obj : C:\Users\mcpri\Desktop\D&
+EV\D.U.M.D\src\rand.c .AUTODEPEND
+ @C:
+ cd C:\Users\mcpri\Desktop\DEV\D.U.M.D\build
+ *wcc ..\src\rand.c -fo=.obj -i="C:\WATCOM/h" -w4 -e25 -zq -od -d2 -bt=dos -&
+ml
+
+C:\Users\mcpri\Desktop\DEV\D.U.M.D\build\dumd.exe : C:\Users\mcpri\Desktop\D&
+EV\D.U.M.D\build\game.obj C:\Users\mcpri\Desktop\DEV\D.U.M.D\build\map.obj C&
+:\Users\mcpri\Desktop\DEV\D.U.M.D\build\rand.obj C:\Users\mcpri\Desktop\DEV\&
+D.U.M.D\src\map.h C:\Users\mcpri\Desktop\DEV\D.U.M.D\src\rand.h .AUTODEPEND
+ @C:
+ cd C:\Users\mcpri\Desktop\DEV\D.U.M.D\build
+ @%write dumd.lk1 FIL game.obj,map.obj,rand.obj
+ @%append dumd.lk1 
+ *wlink name dumd d all sys dos op m op maxe=25 op q op symf @dumd.lk1
+
