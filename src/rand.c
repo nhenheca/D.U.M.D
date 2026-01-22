@@ -1,4 +1,5 @@
 #include "rand.h"
+#include "dos.h"
 
 /* ######### INITIALIZATIONS #########*/
 unsigned int  rand_seed;
@@ -26,10 +27,10 @@ const unsigned char rand_table[256] = {
 
 /* ######### FUNCTIONS ######### */
 void set_seed(void){
-    /*union REGS r;
-    r.h.ah = 0x00;
-    int86(0x1A, &r, &r);
-    rand_seed = r.x.cx ^ r.x.dx;*/
+    union REGS regs;
+    regs.h.ah = 0x00;
+    int86(0x1A, &regs, &regs);
+    rand_seed = regs.x.cx ^ regs.x.dx;
 
     rand_table_index  = rand_seed & 0xFF;  
     rand_table_shift = (rand_seed >> 8) | 1;  

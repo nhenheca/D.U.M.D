@@ -11,7 +11,8 @@ extern unsigned char rand_table_disturb;
 extern const unsigned char rand_table[RAND_TABLE_SIZE];
 
 /* ######### MACROS ######### */
-#define GET_RAND_VALUE() (rand_table[rand_table_index++] ^ rand_table[rand_table_shift += 3])
+#define GET_RAND_VALUE() (rand_table[(unsigned char)(rand_table_index++ + (rand_table_shift += 5))] ^ rand_table_disturb++)
+
 
 /* ######### FUNCTIONS #########*/
 void set_seed(void);
