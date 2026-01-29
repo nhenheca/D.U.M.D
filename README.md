@@ -3,5 +3,5 @@ DOS Universal Minimalist Dungeon...           Crawler
 
 # Minimum Requeriments
 - CPU: 8088
-- RAM: 256KB
+- RAM: 128KB
 - SPACE: 4MB
