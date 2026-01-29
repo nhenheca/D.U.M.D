@@ -13,9 +13,8 @@ extern const unsigned char rand_table[RAND_TABLE_SIZE];
 /* ######### MACROS ######### */
 #define GET_RAND_VALUE() (rand_table[(unsigned char)(rand_table_index++ + (rand_table_shift += 5))] ^ rand_table_disturb++)
 
-
 /* ######### FUNCTIONS #########*/
 void set_seed(void);
 
-/* MEMORY SIZE = 259B  */
+/* MEMORY SIZE = 264B  */
 #endif

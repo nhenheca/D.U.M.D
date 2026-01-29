@@ -7,7 +7,7 @@ unsigned char rand_table_index;
 unsigned char rand_table_shift;
 unsigned char rand_table_disturb;
 
-const unsigned char rand_table[256] = { 
+const unsigned char rand_table[RAND_TABLE_SIZE] = { 
     88, 91, 163, 173, 78, 176, 149, 155, 104, 236, 202, 169, 224, 15, 235, 222,
     111, 177, 95, 215, 12, 170, 122, 98, 50, 1, 250, 191, 121, 100, 240, 228,
     209, 101, 171, 117, 103, 120, 131, 144, 86, 167, 132, 234, 11, 237, 168, 67,

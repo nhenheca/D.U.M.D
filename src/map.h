@@ -2,9 +2,9 @@
 #define MAP_H
 
 /* ############ MAP DEFINITIONS ############ */
-#define MAX_WIDTH  64
-#define MAX_HEIGHT 64
-#define MAP_SIZE   (MAX_WIDTH * MAX_HEIGHT)
+#define MAP_X 64
+#define MAP_Y 64
+#define MAP_SIZE (MAP_X * MAP_Y)
 
 /* ############ BIT MASKS ############ */
 #define MASK_TILE 0x0F /* EQ 0000 1111 */
