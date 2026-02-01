@@ -7,7 +7,7 @@
 #define ENTITY_NAME_SIZE 10 
 #define ENTITY_ABILITY_NAME_SIZE 13 
 
-/* ######### DATA DECLARATIONS ######### */
+/* --------- DATA DECLARATIONS --------- */
 typedef struct {
     unsigned char x;        /* Entity x coordinate */    
     unsigned char y;        /* Entity y coordinate */
@@ -39,9 +39,9 @@ extern Entity entity_array[ENTITY_ARRAY_SIZE];
 extern const EntityType entity_type_array[ENTITY_TYPE_ARRAY_SIZE];
 extern const EntityAbility entity_ability_array[ENTITY_ABILITIES_ARRAY_SIZE];
 
-/* ######### MACROS ######### */
+/* --------- MACROS --------- */
 
-/* ######### FUNCTIONS #########*/
+/* --------- FUNCTIONS --------- */
 
 /* MEMORY SIZE = 3648B  */
 

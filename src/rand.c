@@ -1,7 +1,7 @@
 #include "rand.h"
 #include "dos.h"
 
-/* ######### INITIALIZATIONS #########*/
+/* --------- INITIALIZATIONS ---------
 unsigned int  rand_seed;
 unsigned char rand_table_index;
 unsigned char rand_table_shift;
@@ -25,7 +25,7 @@ const unsigned char rand_table[RAND_TABLE_SIZE] = {
     53, 45, 49, 19, 66, 22, 110, 156, 248, 16, 213, 114, 10, 162, 172, 14, 
     33, 34, 159, 59, 93, 141, 54, 198, 205, 46, 74, 150, 154, 194, 106, 60 };
 
-/* ######### FUNCTIONS ######### */
+/* --------- FUNCTIONS --------- */
 void set_seed(void){
     union REGS regs;
     regs.h.ah = 0x00;
